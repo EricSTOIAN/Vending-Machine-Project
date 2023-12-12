@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="Vending Machine" Height="650" Width="500">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
         
+        <!--Banner-->
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"  Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="Snacks and Drinks" FontSize="30"/>
+        </StackPanel>
     </Grid>
 </Window>
