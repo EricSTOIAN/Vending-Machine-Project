@@ -11,11 +11,11 @@
             <ColumnDefinition Width="25*"/>
             <ColumnDefinition Width="25*"/>
             <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="20*"/>
@@ -24,7 +24,56 @@
         
         <!--Banner-->
         <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"  Orientation="Horizontal" HorizontalAlignment="Center">
-            <TextBlock Text="Snacks and Drinks" FontSize="30"/>
+            <TextBlock Text="Quick Munch" FontSize="30"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Image Source="/Images/apple.jpg" Height="110"/>
+            <Button Content="Red Apple" Margin="5"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Image Source="/Images/Dad's cookies.jpg" Height="110"/>
+            <Button Content="Dad's Cookie" Margin="5"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Image Source="/Images/Lays Ketchup.png" Height="110"/>
+            <Button Content="Lays Ketchup" Margin="5" Click="Button_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Image Source="/Images/orange.jpg" Height="110"/>
+            <Button Content="Orange" Margin="5"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Image Source="/Images/Lays original.jpg" Height="110"/>
+            <Button Content="Lays Original" Margin="5"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Image Source=" /images/pringles.webp" Height="110"/>
+            <Button Content="Pringles" Margin="5"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Image Source="/Images/Sour gummy worms.jpg" Height="110"/>
+            <Button Content="Sour Gummies" Margin="5"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Image Source="/Images/Strawberry Marshmallows.jpg" Height="110"/>
+            <Button Content="Marshmallows" Margin="5"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="3" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Image Source="/Images/Zesty Doritos.png" Height="110"/>
+            <Button Content="Zesty Doritos" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Center">
+            <Label Content="Red Apple: 1.25$" FontWeight="Bold"/>
+            <Label Content="Dad's Cookie: 1.50$" FontWeight="Bold"/>
+            <Label Content="Lays Ketchup: 2.00$" FontWeight="Bold"/>
+            <Label Content="Orange: 1.30$" FontWeight="Bold"/>
+            <Label Content="Lays Original: 1.95$" FontWeight="Bold"/>
+            <Label Content="Pringles: 2.50$" FontWeight="Bold"/>
+            <Label Content="Sour Gummies: 2.10$" FontWeight="Bold"/>
+            <Label Content="Marshmallows: 1.25$" FontWeight="Bold"/>
+            <Label Content="Zesty Doritos: 1.75$" FontWeight="Bold"/>
         </StackPanel>
     </Grid>
 </Window>
