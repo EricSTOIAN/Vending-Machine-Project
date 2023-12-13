@@ -12,7 +12,7 @@ namespace PIIIProject
     {
         public static List<Product> LoadProducts(string filePath)
         {
-            if(!File.Exists(filePath))
+            if (!File.Exists(filePath))
                 return null;
 
             List<Product> products = new List<Product>();
@@ -20,13 +20,13 @@ namespace PIIIProject
             string[] fileContents = File.ReadAllLines(filePath);
 
 
-            foreach(string line in fileContents)
+            foreach (string line in fileContents)
             {
                 string[] values = line.Split(',');
 
                 if (values.Length != 3)
                     continue;
-                
+
                 string name = values[0];
                 decimal price = decimal.Parse(values[1]);
                 uint quantity = uint.Parse(values[2]);
