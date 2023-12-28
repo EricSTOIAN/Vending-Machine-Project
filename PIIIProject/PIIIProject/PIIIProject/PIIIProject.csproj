@@ -69,6 +69,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -87,6 +88,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Images\pringles.webp" />
+    <None Include="Images\sprite_bottle.webp" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,7 +97,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Pepsi_Bottle.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\apple.jpg" />
     <Resource Include="Images\Dad%27s cookies.jpg" />
@@ -105,6 +109,9 @@
     <Resource Include="Images\Sour gummy worms.jpg" />
     <Resource Include="Images\Strawberry Marshmallows.jpg" />
     <Resource Include="Images\Zesty Doritos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\coke_bottle.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
