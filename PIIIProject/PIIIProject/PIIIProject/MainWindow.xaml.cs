@@ -24,5 +24,15 @@ namespace PIIIProject
         {
             InitializeComponent();
         }
+
+        private void Btn_SnackClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

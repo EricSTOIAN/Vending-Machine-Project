@@ -28,52 +28,107 @@
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Image Source="/Images/apple.jpg" Height="110"/>
-            <Button Content="Red Apple" Margin="5"/>
+            <Button Name="apple" Click="Btn_SnackClick">
+                <StackPanel>
+                    <Image Source="/Images/apple.jpg" Height="110"/>
+                    <TextBlock Text="1.00$" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Image Source="/Images/Dad's cookies.jpg" Height="110"/>
-            <Button Content="Dad's Cookie" Margin="5"/>
+            <Button Name="cookies" Click="Btn_SnackClick">
+                <StackPanel>
+                    <Image Source="/Images/Dad's Cookies.jpg" Height="110"/>
+                    <TextBlock Text="1.50$" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Image Source="/Images/Lays Ketchup.png" Height="110"/>
-            <Button Content="Lays Ketchup" Margin="5" Click="Button_Click"/>
+            <Button Name="lays_Ketchup" Click="Btn_SnackClick">
+                <StackPanel>
+                    <Image Source="/Images/Lays Ketchup.png" Height="110"/>
+                    <TextBlock Text="2.25$" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Image Source="/Images/orange.jpg" Height="110"/>
-            <Button Content="Orange" Margin="5"/>
+            <Button Name="orange" Click="Btn_SnackClick">
+                <StackPanel>
+                    <Image Source="/Images/orange.jpg" Height="110"/>
+                    <TextBlock Text="1.00$" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Image Source="/Images/Lays original.jpg" Height="110"/>
-            <Button Content="Lays Original" Margin="5"/>
+            <Button Name="lays" Click="Btn_SnackClick">
+                <StackPanel>
+                    <Image Source="/Images/Lays original.jpg" Height="110"/>
+                    <TextBlock Text="2.00$" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Image Source=" /images/pringles.webp" Height="110"/>
-            <Button Content="Pringles" Margin="5"/>
+            <Button Name="pringles" Click="Btn_SnackClick">
+                <StackPanel>
+                    <Image Source="/Images/pringles.webp" Height="110"/>
+                    <TextBlock Text="2.50$" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Image Source="/Images/Sour gummy worms.jpg" Height="110"/>
-            <Button Content="Sour Gummies" Margin="5"/>
+            <Button Name="gummies" Click="Btn_SnackClick">
+                <StackPanel>
+                    <Image Source="/Images/Sour gummy worms.jpg" Height="110"/>
+                    <TextBlock Text="3.00$" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Image Source="/Images/Strawberry Marshmallows.jpg" Height="110"/>
-            <Button Content="Marshmallows" Margin="5"/>
+            <Button Name="marshemellows" Click="Btn_SnackClick">
+                <StackPanel>
+                    <Image Source="/Images/Strawberry Marshmallows.jpg" Height="110"/>
+                    <TextBlock Text="2.50$" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="3" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Image Source="/Images/Zesty Doritos.png" Height="110"/>
-            <Button Content="Zesty Doritos" Margin="5"/>
+            <Button Name="doritos" Click="Btn_SnackClick">
+                <StackPanel>
+                    <Image Source="/Images/Zesty Doritos.png" Height="110"/>
+                    <TextBlock Text="2.00$" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button Name="pepsi" Click="Btn_SnackClick">
+                <StackPanel>
+                    <Image Source="/Images/Pepsi_bottle.png" Height="110"/>
+                    <TextBlock Text="1.75$" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button Name="coke" Click="Btn_SnackClick">
+                <StackPanel>
+                    <Image Source="/Images/Coke_bottle.jpg" Height="110"/>
+                    <TextBlock Text="1.75$" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="4" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button Name="sprite" Click="Btn_SnackClick">
+                <StackPanel>
+                    <Image Source="/Images/sprite_bottle.png" Height="110"/>
+                    <TextBlock Text="1.75$" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
 
         <StackPanel Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Center">
-            <Label Content="Red Apple: 1.25$" FontWeight="Bold"/>
-            <Label Content="Dad's Cookie: 1.50$" FontWeight="Bold"/>
-            <Label Content="Lays Ketchup: 2.00$" FontWeight="Bold"/>
-            <Label Content="Orange: 1.30$" FontWeight="Bold"/>
-            <Label Content="Lays Original: 1.95$" FontWeight="Bold"/>
-            <Label Content="Pringles: 2.50$" FontWeight="Bold"/>
-            <Label Content="Sour Gummies: 2.10$" FontWeight="Bold"/>
-            <Label Content="Marshmallows: 1.25$" FontWeight="Bold"/>
-            <Label Content="Zesty Doritos: 1.75$" FontWeight="Bold"/>
+            <StackPanel>
+                <TextBlock Text="Click 'Add' to add item clicked to total." Padding="10"/>
+                <Button Name="AddButton" Height="20" Margin="20" FontWeight="Bold" Click="AddButton_Click">Add to Total</Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

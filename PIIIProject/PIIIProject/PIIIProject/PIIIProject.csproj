@@ -88,7 +88,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Images\pringles.webp" />
-    <None Include="Images\sprite_bottle.webp" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -98,7 +97,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Pepsi_Bottle.png" />
+    <Resource Include="Images\Pepsi_bottle.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\apple.jpg" />
@@ -111,7 +110,10 @@
     <Resource Include="Images\Zesty Doritos.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\coke_bottle.jpg" />
+    <Resource Include="Images\Coke_bottle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sprite_bottle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
