@@ -124,18 +124,26 @@
             </Button>
         </StackPanel>
 
-        <StackPanel Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" Orientation="Vertical" HorizontalAlignment="Center">
+        <StackPanel Grid.Column="3" Grid.Row="1" Grid.RowSpan="4" Orientation="Vertical" HorizontalAlignment="Center">
             <StackPanel>
-                <TextBlock Text="Click 'Add' to add item." Margin="10" TextWrapping="Wrap" Foreground="Green"/>
+                <TextBlock Text="Click 'Add' to add selected item." Margin="10" TextWrapping="Wrap" Foreground="Green"/>
                 <Button Name="AddButton" Height="20" Margin="10" FontWeight="Bold" Click="btn_AddToCartClick">Add</Button>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Click 'Remove' to remove item." Margin="10" TextWrapping="Wrap" Foreground="Green"/>
+                <TextBlock Text="Click 'Remove' to remove selected item." Margin="10" TextWrapping="Wrap" Foreground="Green"/>
                 <Button Name="RemoveButton" Height="20" Margin="10" FontWeight="Bold" Click="btn_RemoveFromCartClick">Remove</Button>
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Click 'Show Cart' to see total items so far." Margin="10" TextWrapping="Wrap" Foreground="Green"/>
                 <Button Name="ShowCurrentTotal" Height="20" Margin="10" FontWeight="Bold" Click="btn_ShowCurrentClick">Show Cart</Button>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Click 'Delete' to see total items so far." Margin="10" TextWrapping="Wrap" Foreground="Green"/>
+                <Button Name="DeleteOrder" Height="20" Margin="10" FontWeight="Bold" Click="btn_DeleteOrderClick">Delete</Button>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Click 'Pay' to pay for all items." Margin="10" TextWrapping="Wrap" Foreground="Green"/>
+                <Button Name="Pay" Height="20" Margin="10" FontWeight="Bold" Click="btn_PayClick">Pay</Button>
             </StackPanel>
         </StackPanel>
     </Grid>

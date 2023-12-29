@@ -39,5 +39,20 @@ namespace PIIIProject
         {
 
         }
+
+        private void btn_ShowCurrentClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_DeleteOrderClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_PayClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
