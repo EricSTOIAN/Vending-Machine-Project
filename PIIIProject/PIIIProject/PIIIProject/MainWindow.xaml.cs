@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PIIIProject.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace PIIIProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<Product> _products = new List<Product>(); //created a list (this is the current total list of items)
         public MainWindow()
         {
             InitializeComponent();
@@ -42,7 +44,8 @@ namespace PIIIProject
 
         private void btn_ShowCurrentClick(object sender, RoutedEventArgs e)
         {
-
+            CurrentTotalWindow currentTotal = new CurrentTotalWindow();
+            currentTotal.Show(); //shows the new currentTotal window
         }
 
         private void btn_DeleteOrderClick(object sender, RoutedEventArgs e)
