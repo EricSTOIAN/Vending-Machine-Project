@@ -30,7 +30,12 @@ namespace PIIIProject
 
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
+        private void btn_AddToCartClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_RemoveFromCartClick(object sender, RoutedEventArgs e)
         {
 
         }
