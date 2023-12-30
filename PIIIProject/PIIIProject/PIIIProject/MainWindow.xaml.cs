@@ -85,7 +85,7 @@ namespace PIIIProject
 
         private void btn_ShowCurrentClick(object sender, RoutedEventArgs e)
         {
-            CurrentTotalWindow currentTotal = new CurrentTotalWindow();
+            CurrentTotalWindow currentTotal = new CurrentTotalWindow(_products);
             currentTotal.Show(); //shows the new currentTotal window
         }
 
