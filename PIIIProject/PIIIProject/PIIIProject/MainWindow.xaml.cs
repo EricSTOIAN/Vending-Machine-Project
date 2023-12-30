@@ -97,7 +97,7 @@ namespace PIIIProject
 
         private void btn_PayClick(object sender, RoutedEventArgs e)
         {
-            PayTotal finalTotal = new PayTotal();
+            PayTotal finalTotal = new PayTotal(_products);
             finalTotal.Show();
         }
     }

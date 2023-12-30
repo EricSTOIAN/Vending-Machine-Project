@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PIIIProject.Views"
         mc:Ignorable="d"
-        Title="PayTotal" Height="450" Width="800">
+        Title="PayTotal" Height="500" Width="350">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Will you pay with cash or credit/debit?" FontSize="18"/>
+
+        <StackPanel Grid.Row="1" Margin="10">
+            <RadioButton Content="Cash" Click="rdb_CashClick"/>
+            <RadioButton Content="Credit/Debit" Click="rdb_CardClick"/>
+        </StackPanel>
     </Grid>
 </Window>
