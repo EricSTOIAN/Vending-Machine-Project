@@ -59,6 +59,9 @@
     <Compile Include="Views\CurrentTotalWindow.xaml.cs">
       <DependentUpon>CurrentTotalWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\PayTotal.xaml.cs">
+      <DependentUpon>PayTotal.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,6 +75,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\CurrentTotalWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PayTotal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -95,7 +102,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Images\pringles.webp" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -122,6 +128,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\sprite_bottle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pringles.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
