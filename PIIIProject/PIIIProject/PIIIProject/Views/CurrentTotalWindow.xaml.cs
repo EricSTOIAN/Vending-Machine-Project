@@ -22,6 +22,8 @@ namespace PIIIProject.Views
         public CurrentTotalWindow()
         {
             InitializeComponent();
+
+
         }
     }
 }

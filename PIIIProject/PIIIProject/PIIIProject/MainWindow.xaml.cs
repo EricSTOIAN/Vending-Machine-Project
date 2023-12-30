@@ -22,7 +22,7 @@ namespace PIIIProject
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<Product> _products = new List<Product>(); //created a list (this is the current total list of items)
+        public List<Product> _products = new List<Product>(); //created a list (this is the current total list of items)
         private List<Product> _vendingMachine = Utilities.LoadProducts("filePath"); //input the ACTUAL filepath here, I haven't created it yet.
         private Product clickedProduct;
         public MainWindow()
@@ -91,7 +91,8 @@ namespace PIIIProject
 
         private void btn_DeleteOrderClick(object sender, RoutedEventArgs e)
         {
-
+            if (_products.Count > 0)
+                _products.Clear();
         }
 
         private void btn_PayClick(object sender, RoutedEventArgs e)
