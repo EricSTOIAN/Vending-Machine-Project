@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PIIIProject
+namespace PIIIProject.Models
 {
     public class Product
     {
@@ -35,6 +35,11 @@ namespace PIIIProject
         {
             get { return _quantity; }
             set { _quantity = value; }
+        }
+
+        public override string ToString()
+        {
+            return $"{Name} - ${Price} - Quantity: {Quantity}";
         }
     }
 }

@@ -17,7 +17,7 @@ namespace PIIIProject.Models
 
         public VendingMachine(List<Product> productList)
         {
-            if(productList != null)
+            if (productList != null)
             {
                 vmProducts = productList;
             }
@@ -31,9 +31,9 @@ namespace PIIIProject.Models
         {
             bool productExists = false;
 
-            foreach(Product existingProduct in vmProducts)
+            foreach (Product existingProduct in vmProducts)
             {
-                if(existingProduct.Name == product.Name)
+                if (existingProduct.Name.ToLower() == product.Name.Trim().ToLower())
                 {
                     productExists = true;
                     existingProduct.Quantity += product.Quantity;
@@ -41,7 +41,7 @@ namespace PIIIProject.Models
                 }
             }
 
-            if(!productExists)
+            if (!productExists)
             {
                 vmProducts.Add(product);
             }
@@ -56,17 +56,31 @@ namespace PIIIProject.Models
 
         }
 
-        public void RemoveProduct(Product product)
+        public Product GetProduct(string name)
+        {
+
+            foreach (Product product in vmProducts)
+            {
+                if (product.Name.ToLower() == name.Trim().ToLower())
+                {
+                    return product;
+                }
+            }
+
+            return null;
+        }
+
+            public void RemoveProduct(Product product)
         {
             bool productExists = false;
 
-            foreach(Product existingProduct in vmProducts)
+            foreach (Product existingProduct in vmProducts)
             {
-                if(existingProduct.Name == product.Name)
+                if (existingProduct.Name.ToLower() == product.Name.ToLower())
                 {
                     productExists = true;
 
-                    if(existingProduct.Quantity > product.Quantity)
+                    if (existingProduct.Quantity > product.Quantity)
                     {
                         existingProduct.Quantity -= product.Quantity;
                     }
