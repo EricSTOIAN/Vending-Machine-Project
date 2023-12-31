@@ -1,0 +1,12 @@
+Apple, 1.00, 10
+Orange, 1.00, 10
+Gummy Worms, 3.00, 5
+Dad's Cookies, 1.50, 5
+Lays Classic,  2.00, 15
+Red Marshmallows, 2.50, 10
+Lays Ketchup, 2.25, 0
+Pringles, 2.50, 5
+Doritos, 2.00, 10
+Pepsi, 1.75, 5
+Coca Cola, 1.75, 0
+Sprite, 1.75, 10 

@@ -23,7 +23,7 @@ namespace PIIIProject
     public partial class MainWindow : Window
     {
         public List<Product> _products = new List<Product>(); //created a list (this is the current total list of items)
-        private List<Product> _vendingMachine = Utilities.LoadProducts("filePath"); //input the ACTUAL filepath here, I haven't created it yet.
+        private List<Product> _vendingMachine = Utilities.LoadProducts("../../Models/products.txt"); //input the ACTUAL filepath here, I haven't created it yet.
         private Product clickedProduct;
         public MainWindow()
         {
