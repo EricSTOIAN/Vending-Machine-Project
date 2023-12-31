@@ -12,11 +12,6 @@ namespace PIIIProject
         private decimal _price = 0;
         private uint _quantity = 0;
 
-        public Product()
-        {
-
-        }
-
         public Product(string name, decimal price, uint quantity)
         {
             Name = name;
