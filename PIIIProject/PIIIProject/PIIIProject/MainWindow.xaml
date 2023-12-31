@@ -84,7 +84,7 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Button x:Name="marshemellows" Click="Btn_SnackClick">
+            <Button x:Name="marshmallows" Click="Btn_SnackClick">
                 <StackPanel>
                     <Image Source="/Images/Strawberry Marshmallows.jpg" Height="120"/>
                     <TextBlock Text="2.50$" HorizontalAlignment="Center"/>

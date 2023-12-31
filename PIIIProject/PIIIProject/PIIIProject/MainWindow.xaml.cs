@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using PIIIProject.Models;
 
 namespace PIIIProject
 {
@@ -22,9 +23,14 @@ namespace PIIIProject
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Product> _products = new List<Product>(); //created a list (this is the current total list of items)
-        private List<Product> _vendingMachine = Utilities.LoadProducts("../../Models/products.txt"); //input the ACTUAL filepath here, I haven't created it yet.
         private Product clickedProduct;
+
+        // initialize vending machine with the product.txt file
+        private static List<Product> vmProducts = Utilities.LoadProducts("../../Models/products.txt"); 
+        private static VendingMachine vendingMachine = new VendingMachine(vmProducts);
+
+        private Cart cart = new Cart();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -40,64 +46,70 @@ namespace PIIIProject
 
             uint itemQuantity = 1;
 
+            Product t = new Product(itemName, itemPrice, itemQuantity);
+
             clickedProduct = new Product(itemName, itemPrice, itemQuantity);
         }
 
         private void btn_AddToCartClick(object sender, RoutedEventArgs e)
         {
-            for(int i = 0; i < _vendingMachine.Count; i++)
+            if(clickedProduct != null)
             {
-                if(clickedProduct.Name == _vendingMachine[i].Name && _vendingMachine[i].Quantity > 0)
+                Product item = new Product(clickedProduct.Name, clickedProduct.Price, clickedProduct.Quantity); 
+
+                if (vendingMachine.GetProduct(clickedProduct.Name).Quantity > 0)
                 {
-                    _vendingMachine[i].Quantity--;
-                    for (int j = 0; j < _products.Count; j++)
-                    {
-                        if (_products[j].Name == clickedProduct.Name) 
-                        {
-                            _products[j].Quantity++;
-                            break;
-                        }
-                    }
-                    _products.Append(clickedProduct);
+                    MessageBox.Show("Item: " + item.ToString() + " was added to the cart.");
+                    cart.AddItemToCart(item);
+                    vendingMachine.RemoveProduct(item);
+                }
+                else
+                {
+                    MessageBox.Show("Sorry, no more " + clickedProduct.Name + "in the vending machine!");
                 }
             }
+            else
+            {
+                MessageBox.Show("Please select an item first before adding to cart.");
+            }
+
         }
 
         private void btn_RemoveFromCartClick(object sender, RoutedEventArgs e)
         {
-            for (int i = 0; i < _vendingMachine.Count; i++)
+            if (clickedProduct != null)
             {
-                for (int j = 0; j < _products.Count; j++)
+                Product item = new Product(clickedProduct.Name, clickedProduct.Price, clickedProduct.Quantity);
+
+                MessageBox.Show(item.ToString());
+
+                foreach(Product product in cart.ItemsInCart())
                 {
-                    if (clickedProduct.Name == _vendingMachine[i].Name && _products[j].Name == clickedProduct.Name)
+                    if (product.Name.ToLower() == item.Name.ToLower() && product.Quantity > 0)
                     {
-                        _vendingMachine[i].Quantity++;
-                        if (_products[j].Quantity > 1)
-                        {
-                            _products[j].Quantity--;
-                            break;
-                        }
-                        _products.Remove(clickedProduct);
+                        cart.RemoveItemFromCart(item);
+                        vendingMachine.AddProduct(item);
                     }
                 }
+
             }
         }
 
         private void btn_ShowCurrentClick(object sender, RoutedEventArgs e)
         {
-            CurrentTotalWindow currentTotal = new CurrentTotalWindow(_products);
+            CurrentTotalWindow currentTotal = new CurrentTotalWindow(cart);
             currentTotal.Show(); //shows the new currentTotal window
         }
 
         private void btn_DeleteOrderClick(object sender, RoutedEventArgs e)
         {
-            if (_products.Count > 0)
-                _products.Clear();
+            //if (_products.Count > 0)
+            //    _products.Clear();
         }
 
         private void btn_PayClick(object sender, RoutedEventArgs e)
         {
-            PayTotal finalTotal = new PayTotal(_products);
+            PayTotal finalTotal = new PayTotal(cart);
             finalTotal.Show();
         }
     }
