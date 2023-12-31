@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PIIIProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,19 +21,19 @@ namespace PIIIProject.Views
     public partial class PayTotal : Window
     {
         private decimal totalPrice = 0;
-        public PayTotal(List<Product> products)
+        public PayTotal(Cart cart)
         {
             InitializeComponent();
 
-            for (int i = 0; i < products.Count; i++)
-            {
-                totalPrice = totalPrice + products[i].Price;
+            //for (int i = 0; i < products.Count; i++)
+            //{
+            //    totalPrice = totalPrice + products[i].Price;
 
-                TextBlock myTextBlock = new TextBlock();
-                myTextBlock.FontSize = 18;
-                myTextBlock.FontWeight = FontWeights.Bold;
-                myTextBlock.Text = products[i].Quantity + " " + products[i].Name + "... $" + products[i].Price;
-            }
+            //    TextBlock myTextBlock = new TextBlock();
+            //    myTextBlock.FontSize = 18;
+            //    myTextBlock.FontWeight = FontWeights.Bold;
+            //    myTextBlock.Text = products[i].Quantity + " " + products[i].Name + "... $" + products[i].Price;
+            //}
 
             //find out if user pays by cash or by card
         }

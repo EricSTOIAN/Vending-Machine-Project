@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PIIIProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,17 +20,17 @@ namespace PIIIProject.Views
     /// </summary>
     public partial class CurrentTotalWindow : Window
     {
-        public CurrentTotalWindow(List<Product> products)
+        public CurrentTotalWindow(Cart cart)
         {
             InitializeComponent();
 
-            for(int i = 0; i < products.Count; i++)
-            {
-                TextBlock myTextBlock = new TextBlock();
-                myTextBlock.FontSize = 18;
-                myTextBlock.FontWeight = FontWeights.Bold;
-                myTextBlock.Text = products[i].Quantity + " " + products[i].Name + "... $" + products[i].Price;
-            }
+            //for(int i = 0; i < products.Count; i++)
+            //{
+            //    TextBlock myTextBlock = new TextBlock();
+            //    myTextBlock.FontSize = 18;
+            //    myTextBlock.FontWeight = FontWeights.Bold;
+            //    myTextBlock.Text = products[i].Quantity + " " + products[i].Name + "... $" + products[i].Price;
+            // }
         }
 
         private void btn_CloseClick(object sender, RoutedEventArgs e)
