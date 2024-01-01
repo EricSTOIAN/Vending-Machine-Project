@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace PIIIProject.Models
 {
@@ -23,7 +24,7 @@ namespace PIIIProject.Models
 
             foreach (Product existingItem in cartItems)
             {
-                if (existingItem.Name == product.Name)
+                if (existingItem.Name.ToLower() == product.Name.ToLower())
                 {
                     productExists = true;
                     existingItem.Quantity += product.Quantity;
@@ -39,33 +40,20 @@ namespace PIIIProject.Models
 
         public void RemoveItemFromCart(Product product)
         {
-            bool productExists = false;
-
-            foreach (Product existingItem in cartItems)
+            for (int i = 0; i < cartItems.Count; i++)
             {
-                if (existingItem.Name == product.Name)
+                if (cartItems[i].Name.ToLower() == product.Name.ToLower())
                 {
-                    if (existingItem.Quantity >= product.Quantity)
-                    {
-                        productExists = true;
-                        existingItem.Quantity -= product.Quantity;
-
-                        break;
-                    }
-                    else
-                    {
-                        throw new Exception("Product quantity is greater than list quantity.");
-                    }
+                    cartItems.RemoveAt(i);
+                    break;
                 }
             }
-
-            if(!productExists)
-            {
-                throw new Exception("Item does not exist.");
-            }
-
         }
 
+        public void ClearCart()
+        {
+            cartItems.Clear();
+        }
 
         public List<Product> ItemsInCart()
         {
