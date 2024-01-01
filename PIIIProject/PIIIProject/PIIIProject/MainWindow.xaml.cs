@@ -87,12 +87,11 @@ namespace PIIIProject
                 {
                     if (product.Name.ToLower() == item.Name.ToLower() && product.Quantity > 0)
                     {
-                        cart.RemoveItemFromCart(item);
-                        vendingMachine.AddProduct(item);
+                        cart.RemoveItemFromCart(product);
+                        vendingMachine.AddProduct(product);
                         break;
                     }
                 }
-
             }
         }
 
@@ -104,6 +103,10 @@ namespace PIIIProject
 
         private void btn_DeleteOrderClick(object sender, RoutedEventArgs e)
         {
+            // add to the vending machine
+            vendingMachine.AddProducts(cart.ItemsInCart());
+
+            // clear cart
             cart.ClearCart();
         }
 

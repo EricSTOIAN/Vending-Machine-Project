@@ -47,7 +47,27 @@ namespace PIIIProject.Models
             }
         }
 
-        public Product GetProduct(string name)
+        public void AddProducts(List<Product> products)
+        {
+            // Add products to the vmProducts
+            // double foreach loop
+
+
+            foreach(Product product in products)
+            {
+                foreach(Product existingProduct in vmProducts)
+                {
+                    if(product.Name.ToLower() == existingProduct.Name.ToLower())
+                    {
+                        existingProduct.Quantity += product.Quantity;
+                        break;
+                    }
+                }
+            }
+
+        }
+
+            public Product GetProduct(string name)
         {
 
             foreach (Product product in vmProducts)
