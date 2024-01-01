@@ -47,15 +47,6 @@ namespace PIIIProject.Models
             }
         }
 
-        public void AddProducts(List<Product> productList)
-        {
-            foreach (Product product in productList)
-            {
-                vmProducts.Add(product);
-            }
-
-        }
-
         public Product GetProduct(string name)
         {
 

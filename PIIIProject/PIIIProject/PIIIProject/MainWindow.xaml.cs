@@ -89,6 +89,7 @@ namespace PIIIProject
                     {
                         cart.RemoveItemFromCart(item);
                         vendingMachine.AddProduct(item);
+                        break;
                     }
                 }
 
@@ -103,8 +104,7 @@ namespace PIIIProject
 
         private void btn_DeleteOrderClick(object sender, RoutedEventArgs e)
         {
-            //if (_products.Count > 0)
-            //    _products.Clear();
+            cart.ClearCart();
         }
 
         private void btn_PayClick(object sender, RoutedEventArgs e)
