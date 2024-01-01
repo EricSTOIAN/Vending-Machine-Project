@@ -5,19 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PIIIProject.Views"
         mc:Ignorable="d"
-        Title="PayTotal" Height="500" Width="350">
+        Title="PayTotal" 
+        SizeToContent="WidthAndHeight"
+        >
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="2.5*"/>
-            <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
-
-        <Label Grid.Row="0" Content="Will you pay with cash or credit/debit?" FontSize="18"/>
-
-        <StackPanel Grid.Row="1" Margin="10">
-            <RadioButton Content="Cash" Click="rdb_CashClick"/>
-            <RadioButton Content="Credit/Debit" Click="rdb_CardClick"/>
+        
+        <StackPanel Grid.Row="0">
+            <TextBlock FontSize="20" HorizontalAlignment="Center" FontWeight="Bold">Cart Items</TextBlock>
+            <Label  Content="Will you pay with cash or credit/debit?" FontSize="18"/>
         </StackPanel>
+        
+        <StackPanel Grid.Row="1" Margin="10" Orientation="Horizontal">
+            <RadioButton Content="Cash" Click="rdb_CashClick" Margin="5" />
+            <RadioButton Content="Credit/Debit" Click="rdb_CardClick"  Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" x:Name="ProductList" Orientation="Vertical" Margin="10 0 0 0"></StackPanel>
+
+        <Button Grid.Row="3" Name="AddButton" Height="20" Margin="10" Width="100" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Bold" Click="btn_CloseClick">
+            OK
+        </Button>
     </Grid>
 </Window>

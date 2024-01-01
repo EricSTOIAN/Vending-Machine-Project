@@ -1,4 +1,4 @@
-﻿using PIIIProject.Models;
+using PIIIProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,17 +25,21 @@ namespace PIIIProject.Views
         {
             InitializeComponent();
 
-            //for (int i = 0; i < products.Count; i++)
-            //{
-            //    totalPrice = totalPrice + products[i].Price;
 
-            //    TextBlock myTextBlock = new TextBlock();
-            //    myTextBlock.FontSize = 18;
-            //    myTextBlock.FontWeight = FontWeights.Bold;
-            //    myTextBlock.Text = products[i].Quantity + " " + products[i].Name + "... $" + products[i].Price;
-            //}
+            foreach(Product product in cart.ItemsInCart())
+            {
+                if (product.Quantity == 0)
+                {
+                    continue;
+                }
 
-            //find out if user pays by cash or by card
+                TextBlock textBlock = new TextBlock();
+                textBlock.FontSize = 18;
+                textBlock.FontWeight = FontWeights.Bold;
+                textBlock.Text = $"{product.Quantity}, {product.Name}, {product.Price}";
+
+                ProductList.Children.Add(textBlock);
+            }
         }
 
         private void rdb_CashClick(object sender, RoutedEventArgs e)
@@ -57,6 +61,11 @@ namespace PIIIProject.Views
 
             TextBlock payedTextBlock = new TextBlock();
             payedTextBlock.Text = "Your amount has been payed! Enjoy your snacks!";
+        }
+
+        private void btn_CloseClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
