@@ -1,0 +1,56 @@
+﻿<Window x:Class="PIIIProject.Views.CashDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PIIIProject.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="CashDialog"
+        SizeToContent="WidthAndHeight">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" FontSize="12" Margin="10 0 10 0">What bills do you want to pay with?</TextBlock>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Height="20" Width="30">$5</TextBlock>
+            <TextBox x:Name="FiveDollar" Height="20" Width="20">0</TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Height="20" Width="30">$10</TextBlock>
+            <TextBox x:Name="TenDollar" Height="20" Width="20">0</TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Height="20" Width="30">$20</TextBlock>
+            <TextBox x:Name="TwentyDollar" Height="20" Width="20">0</TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Height="20" Width="30">$50</TextBlock>
+            <TextBox x:Name="FiftyDollar" Height="20" Width="20">0</TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Height="20" Width="30">$100</TextBlock>
+            <TextBox x:Name="HundredDollar" Height="20" Width="20">0</TextBox>
+        </StackPanel>
+
+        <Button Grid.Row="6" Height="20" Margin="10" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Click="OKButton_Click">
+            OK
+        </Button>
+        
+
+    </Grid>
+</Window>
