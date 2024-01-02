@@ -36,6 +36,15 @@ namespace PIIIProject
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Processes a button click for a snack item, 
+        /// extracting information such as the item name 
+        /// and price from the clicked button. It then 
+        /// creates a new Product object with default 
+        /// quantity and assigns it to clickedProduct.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_SnackClick(object sender, RoutedEventArgs e)
         {
             string itemName = (sender as Button).Name;
@@ -51,6 +60,13 @@ namespace PIIIProject
             clickedProduct = new Product(itemName, itemPrice, itemQuantity);
         }
 
+        /// <summary>
+        /// Adds a selected product to the cart if available in the vending machine, 
+        /// updating stock accordingly. It provides user feedback through messages 
+        /// and prompts to select an item if none is chosen.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_AddToCartClick(object sender, RoutedEventArgs e)
         {
             if(clickedProduct != null)
@@ -72,9 +88,16 @@ namespace PIIIProject
             {
                 MessageBox.Show("Please select an item first before adding to cart.");
             }
-
         }
 
+        /// <summary>
+        /// Removes a selected product from the cart, updating the cart and 
+        /// vending machine accordingly. It displays the removed item's 
+        /// information and processes the removal based on a matching 
+        /// product name and quantity.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_RemoveFromCartClick(object sender, RoutedEventArgs e)
         {
             if (clickedProduct != null)
@@ -95,12 +118,24 @@ namespace PIIIProject
             }
         }
 
+        /// <summary>
+        /// Creates and displays a new window (CurrentTotalWindow) showing 
+        /// the current total of items in the shopping cart.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_ShowCurrentClick(object sender, RoutedEventArgs e)
         {
             CurrentTotalWindow currentTotal = new CurrentTotalWindow(cart);
             currentTotal.Show(); //shows the new currentTotal window
         }
 
+        /// <summary>
+        /// Adds the items from the cart back to the vending machine 
+        /// and then clears the cart.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_DeleteOrderClick(object sender, RoutedEventArgs e)
         {
             // add to the vending machine
@@ -110,6 +145,13 @@ namespace PIIIProject
             cart.ClearCart();
         }
 
+        /// <summary>
+        /// Creates and displays a new window (PayTotal) for 
+        /// processing the payment of the final total in the 
+        /// shopping cart.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_PayClick(object sender, RoutedEventArgs e)
         {
             PayTotal finalTotal = new PayTotal(cart);

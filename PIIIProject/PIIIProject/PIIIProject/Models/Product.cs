@@ -12,6 +12,14 @@ namespace PIIIProject.Models
         private decimal _price = 0;
         private uint _quantity = 0;
 
+        /// <summary>
+        /// Initializes  a product with a name, price
+        /// and quantity. Next, it sets the properties 
+        /// of the product using the provided parameters.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="price"></param>
+        /// <param name="quantity"></param>
         public Product(string name, decimal price, uint quantity)
         {
             Name = name;
