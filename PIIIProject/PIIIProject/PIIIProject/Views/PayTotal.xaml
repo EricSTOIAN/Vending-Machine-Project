@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="PayTotal" 
         SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen"
         >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
@@ -28,7 +30,27 @@
 
         <StackPanel Grid.Row="2" x:Name="ProductList" Orientation="Vertical" Margin="10 0 0 0"></StackPanel>
 
-        <Button Grid.Row="3" Name="AddButton" Height="20" Margin="10" Width="100" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Bold" Click="btn_CloseClick">
+        <StackPanel Grid.Row="3" x:Name="CostInfoCard" Visibility="Collapsed" Margin="10 0 10 0">
+            <TextBlock FontSize="12">Payment Type: Credit/Debit</TextBlock>
+            <TextBlock FontSize="12">Total Cost: <Run x:Name="TotalCostCard"></Run></TextBlock>
+            <TextBlock></TextBlock>
+            <TextBlock FontSize="12">Thanks for using our vending machine! Enjoy your snacks!</TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" x:Name="CostInfoCash" Visibility="Hidden" Margin="10 0 10 0">
+            <TextBlock FontSize="12">Payment Type: Cash</TextBlock>
+            <TextBlock FontSize="12">Total Cost: <Run x:Name="TotalCostCash"></Run></TextBlock>
+            <TextBlock FontSize="12">Amount received: <Run x:Name="AmountReceived"></Run></TextBlock>
+            <TextBlock FontSize="12">Change: <Run x:Name="CashChange"></Run></TextBlock>
+            <TextBlock></TextBlock>
+            <TextBlock>Breakdown:</TextBlock>
+            <TextBlock x:Name="ChangeBreakdown"></TextBlock>
+            
+            
+            <TextBlock FontSize="12">Thanks for using our vending machine! Enjoy your snacks!</TextBlock>
+        </StackPanel>
+        
+        <Button Grid.Row="4" Name="AddButton" Height="20" Margin="10" Width="100" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="Bold" Click="btn_CloseClick">
             OK
         </Button>
     </Grid>

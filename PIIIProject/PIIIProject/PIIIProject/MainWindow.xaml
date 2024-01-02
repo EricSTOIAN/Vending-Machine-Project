@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PIIIProject"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="Vending Machine" Height="650" Width="500">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -138,8 +139,8 @@
                 <Button Name="ShowCurrentTotal" Height="20" Margin="10" FontWeight="Bold" Click="btn_ShowCurrentClick">Show Cart</Button>
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Click 'Delete' to remove all items." Margin="10" TextWrapping="Wrap" Foreground="Green"/>
-                <Button Name="DeleteOrder" Height="20" Margin="10" FontWeight="Bold" Click="btn_DeleteOrderClick">Delete</Button>
+                <TextBlock Text="Click 'Clear Cart' to remove all items." Margin="10" TextWrapping="Wrap" Foreground="Green"/>
+                <Button Name="DeleteOrder" Height="20" Margin="10" FontWeight="Bold" Click="btn_DeleteOrderClick">Clear Cart</Button>
             </StackPanel>
             <StackPanel>
                 <TextBlock Text="Click 'Pay' to pay for all items." Margin="10" TextWrapping="Wrap" Foreground="Green"/>

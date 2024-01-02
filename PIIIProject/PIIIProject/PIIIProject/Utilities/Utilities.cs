@@ -11,6 +11,13 @@ namespace PIIIProject
 {
     public class Utilities
     {
+        /// <summary>
+        /// Reads a file containing product data (name, price, quantity) 
+        /// and returns a list of Product objects. If the file or data 
+        /// format is invalid, it returns null.
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns>Returns a list of products</returns>
         public static List<Product> LoadProducts(string filePath)
         {
             if (!File.Exists(filePath))
@@ -36,9 +43,7 @@ namespace PIIIProject
 
                 products.Add(product);
             }
-
             return products;
-
         }
     }
 }

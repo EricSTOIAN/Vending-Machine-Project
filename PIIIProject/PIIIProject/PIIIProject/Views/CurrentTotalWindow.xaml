@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PIIIProject.Views"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="CurrentTotalWindow" Height="500" Width="400">
     <Grid>
 
